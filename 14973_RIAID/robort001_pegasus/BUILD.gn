@@ -1,0 +1,32 @@
+static_library("robort01") {
+  sources = [
+    "hal_iot_gpio_ex.c",
+    "task_create.c",
+    "step_motor_cmd.c",
+    "robort_move_data.c",
+    "servo_cmd.c",
+    "ArmResolving.c",
+    "arm_cmd.c",
+    "taurus_uart.c",
+    "udp_server.c",
+    "wifi_softap.c",
+    "wifi_sta_connect.c",
+  ]
+
+  include_dirs = [
+    "./",
+    "//utils/native/lite/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/include/base",
+    "//utils/native/lite/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/lwip_sack/include/lwip",
+    "//third_party/cJSON",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/mbedtls/include/mbedtls",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/paho.mqtt.c/include/mqtt",
+    "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/libcoap/include/coap2",
+    ]
+}
